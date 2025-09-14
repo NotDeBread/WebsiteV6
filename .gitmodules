@@ -1,0 +1,30 @@
+[submodule "games/WinnieAccumulator"]
+	path = games/WinnieAccumulator
+	url = https://github.com/NotDeBread/WinnieAccumulator.git
+[submodule "games/MathGame"]
+	path = games/MathGame
+	url = https://github.com/NotDeBread/MathGame.git
+[submodule "games/GooberShooter"]
+	path = games/GooberShooter
+	url = https://github.com/NotDeBread/GooberShooter.git
+[submodule "archives/Eddie-Accumulator"]
+	path = archives/Eddie-Accumulator
+	url = https://github.com/NotDeBread/Eddie-Accumulator.git
+[submodule "archives/RandomSentenceGenerator"]
+	path = archives/RandomSentenceGenerator
+	url = https://github.com/NotDeBread/RandomSentenceGenerator.git
+[submodule "archives/BigNumber"]
+	path = archives/BigNumber
+	url = https://github.com/NotDeBread/BigNumber.git
+[submodule "archives/PressTheButton"]
+	path = archives/PressTheButton
+	url = https://github.com/NotDeBread/PressTheButton.git
+[submodule "archives/NotJSAB"]
+	path = archives/NotJSAB
+	url = https://github.com/NotDeBread/NotJSAB.git
+[submodule "archives/cprGame"]
+	path = archives/cprGame
+	url = https://github.com/NotDeBread/cprGame.git
+[submodule "archives/PixelGenerator"]
+	path = archives/PixelGenerator
+	url = https://github.com/NotDeBread/PixelGenerator.git
