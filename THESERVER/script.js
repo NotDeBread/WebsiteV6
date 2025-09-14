@@ -1,0 +1,55 @@
+const splashTexts = [
+    'Play CHEGG!',
+    '40FPS!',
+    'Fox bomb',
+    'Goodbye Briar!',
+    'Drink and um i forgot',
+    'Visit B.O.Bs!',
+    'Gamble!',
+    'Nuclear warfare!',
+    'Heavy is coming, run.',
+    '26 Create Addons!',
+    'Cookie?',
+    'TFMG is pissing me off',
+    'These mods are pissing me off',
+    'Find the lemons!',
+    'The Breeder',
+    'The ball is in your court, literally',
+    'Rent The Tower!',
+    '1.3k Stuffed pumpkin...',
+    'The smell of pork fills your base',
+    '500 Water wheels',
+    'Fat babby',
+    'RIP Taft...',
+    'Two of them',
+    'I reached for my worm',
+    'Harold',
+    'Blow bubbles!',
+    'Gaze upon Briar\'s shaft!',
+    '400k Andesite! ',
+    'SAY GEX',
+    'All hail Temu Emu',
+    'In the beginning, "B.O.B." was the word',
+    'Did He?',
+    'He did.',
+    'Now with nuke proof snakes!',
+    'Court is never again in session',
+    'Simple Jim',
+    'We support gun violence',
+    'Never Forget. Bottom Text.',
+    'Fuck TFMG',
+    'We got GTA 6 before the House With Garden',
+    'Yes, shrimp fried rice',
+    'Walmart update soon™',
+    'Cookie?',
+    'Briar and the foxes',
+    'Dottr, you still owe 50,000 emeralds in legal fees',
+    'You should get on the server more often'
+]
+
+doge('splash').innerText = splashTexts[DeBread.randomNum(0,splashTexts.length-1)]
+doge('splash').onclick = () => {
+    doge('splash').innerText = splashTexts[DeBread.randomNum(0,splashTexts.length-1)]
+}
+
+doge('crtOverlay').style.opacity = 0

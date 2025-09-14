@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../global.css">
+    <link rel="icon" type="image/x-icon" href="../media/favicon.png">
+    <title>DeBread's Space - About me</title>
+</head>
+<body>
+    <div id="crtOverlay"></div>
+    <div id="loadingEmblemContainer">
+        <img src="../media/emblem.svg" width="100" id="loadingEmblem">
+    </div>
+    <div id="loadingScreenContainer">
+        <div id="loadingScreen"></div>
+    </div>
+
+    <button onclick="gotoPage('home')" class="goBackButton">
+      <svg style="min-width: 24px !important; min-height: 24px !important;" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l4 4" /><path d="M5 12l4 -4" /></svg>
+      Go back
+    </button>
+
+    <!------------------------->
+
+
+    <div id="titleContainer">
+      <div>
+        <wavey id="title">About me</wavey>
+        <span>I'm just a guy that resides in Missouri who somehow got into web development.</span>
+      </div>
+      <div id="guyContainer">
+        <wavey id="guyLabel">This is my guy -></wavey>
+        <img src="../media/guy2.png" id="titleGuy">
+      </div>
+    </div>
+
+    <div id="main">
+      <div class="bodyRow">
+        <div class="body">
+          <div class="headerContainer">
+            <span class="header">Computer Hardware</span>
+            <div class="coolLine"></div>
+          </div>
+          <div class="paragraph">
+            <span>Ever since I got my first (pre-built) pc back in 2020 I've been facinated about how computers worked. Over the years I've slowly been collecting parts and upgrading my PC with the money I've collected from Christmas and my birthday. Currently, I'm enrolled in a special class called Computer Service Technology, where I leave my highschool for half the day to build and learn about computer hardware and software.</span>
+            <div class="imageContainer" style="width: 200px;">
+              <img src="../media/aboutme/pc.jpg" width="200" onclick="openImage('../media/aboutme/pc.jpg', 'An image of one of the PCs I built in my computer servicing class. It includes 14 fans total and 1 useless GPU.')">
+              <span>An image of one of the PCs I built in my computer servicing class. It includes 14 fans total and 1 useless GPU.</span>
+            </div>
+          </div>
+        </div>
+        <div class="body">
+          <div class="headerContainer">
+            <span class="header">Web Development</span>
+            <div class="coolLine"></div>
+          </div>
+          <div class="paragraph">
+            <span>About 4 years ago, one of my friends was showcasing thier website in a call I was in. Seeing that inspired me to make one of my own websites, my first attempt being <a onclick="gotoPage('EddieSite')">The Eddie Site</a>. It was nothing special, just a basic website that showcased pictures of my dog Eddie using really basic HTML and a little bit of CSS. I kept messing around with it eventually reaching the point where I had to learn JavaScript to do the things I wanted. My first JS project being <a onclick="gotoPage('EddieAccumulator')">Eddie Accumulator</a>, which was <em>very</em> poorly coded (which you can see <a href="https://github.com/NotDeBread/Eddie-Accumulator/blob/main/upgrades.js" target="_blank">here.</a>).</span>
+            <div class="imageContainer" style="width: 300px;">
+              <img src="../media/oldEddieAccumulator.gif" width="300" onclick="openImage('../media/oldEddieAccumulator.gif','Early gameplay footage of the first version of Eddie Accumulator.')">
+              <span>Early gameplay footage of the first version of <a>Eddie Accumulator.</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bodyRow" id="favoriteBodyRow">
+        <div class="body">
+          <div class="headerContainer">
+            <span class="header">Favorite Animals</span>
+            <div class="coolLine"></div>
+          </div>
+          <span>🦝 - Racoons</span><br>
+          <span>🦊 - Foxes</span><br>
+          <span>🐦‍⬛ - Crows</span>
+        </div>
+        <div class="body">
+          <div class="headerContainer">
+            <span class="header">Favorite Colors</span>
+            <div class="coolLine"></div>
+          </div>
+          <div style="display: flex; justify-content: center; gap: 25px;">
+            <div class="color" style="background-color: rgb(34, 33, 59);">
+              <span>34,33,59<br>#22213b</span>
+            </div>
+            <div class="color" style="background-color: rgb(125, 89, 255);">
+              <span>125,89,255<br>#7d59ff</span>
+            </div>
+            <div class="color" style="background-color: rgb(110, 255, 219);">
+              <span>110,255,219<br>#6effdb</span>
+            </div>
+          </div>
+        </div>
+        <div class="body">
+          <div class="headerContainer">
+            <span class="header">Programming Languages</span>
+            <div class="coolLine"></div>
+          </div>
+          <div class="language">
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="rgb(228, 77, 37)"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-html5"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z" /><path d="M15.5 8h-7l.5 4h6l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5" /></svg>
+            <span>HTML</span>
+          </div>
+          <div class="language">
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="rgb(45, 83, 229)"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-css3"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z" /><path d="M8.5 8h7l-4.5 4h4l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5" /></svg>            
+            <span>CSS</span>
+          </div>
+          <div class="language">
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="rgb(247, 224, 37)"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-javascript"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z" /><path d="M7.5 8h3v8l-2 -1" /><path d="M16.5 8h-2.5a.5 .5 0 0 0 -.5 .5v3a.5 .5 0 0 0 .5 .5h1.423a.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5" /></svg>            
+            <span>JS</span>
+          </div>
+          <wavey style="position: absolute; right: 25px; top: 50px; color: rgb(255,255,255,0.25);">get a load of this guy</wavey>
+        </div>
+      </div>
+      <div class="bodyRow" style="margin-bottom: 100px;">
+        <div class="body">
+          <div class="headerContainer">
+            <span class="header">Favorite Games</span>
+            <div class="coolLine"></div>
+          </div>
+          <div id="gameContainer">
+            <div class="game" style="background-image: url('../media/aboutme/games/ultrakillbg.png');" onclick="window.open('https://store.steampowered.com/app/1229490/ULTRAKILL/','_blank')">
+              <img src="../media/aboutme/games/ultrakill.webp">
+            </div>
+            <div class="game" style="background-image: url('../media/aboutme/games/balatrobg.png');" onclick="window.open('https://www.playbalatro.com/','_blank')">
+              <img src="../media/aboutme/games/balatro.webp">
+            </div>
+            <div class="game" style="background-image: url('../media/aboutme/games/deltarunebg.png');" onclick="window.open('https://deltarune.com/','_blank')">
+              <img src="../media/aboutme/games/deltarune.png">
+            </div>
+            <div class="game" style="background-image: url('../media/aboutme/games/tunicbg.png');" onclick="window.open('https://tunicgame.com/','_blank')">
+              <img src="../media/aboutme/games/tunic.png">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <img src="../media/real.png" style="position: absolute; top: 100px; left: 500px;"> -->
+
+    <!------------------------->
+
+    <script src="../DeBread.js"></script>
+    <script src="script.js"></script>
+
+    <!-- BG Shader -->
+    <script src="https://xemantic.github.io/shader-web-background/dist/shader-web-background.min.js"></script>
+    <script type="x-shader/x-fragment" id="image">
+    precision mediump float;
+    #define SPIN_EASE 0.8
+    #define spin_time 5.
+    #define spin_amount 0.3
+    #define contrast 1.
+
+    // #define PIXEL_SIZE_FAC 700.
+
+    // default colours
+    // #define colour_1 vec4(1.0,0.3725490196,0.3333333333,1.0)
+    // #define colour_2 vec4(0.0,0.6156862745,1.0,1.0)
+    // #define colour_3 vec4(0.2156862745,0.2588235294,0.2666666667,1.0)
+
+    // dark theme colors
+    #define colour_1 vec4(0.0, 0.0, 0.0, 1.0)
+    #define colour_2 vec4(0.1, 0.1, 0.1, 1.0)
+    #define colour_3 vec4(0.15, 0.15, 0.15, 1.0)
+
+    // light theme colors
+    // #define colour_1 vec4(1, 1, 1, 1.0)
+    // #define colour_2 vec4(0.9, 0.9, 0.9, 1.0)
+    // #define colour_3 vec4(0.8, 0.8, 0.8, 1.0)
+
+    uniform vec2 iResolution;
+    uniform float iTime;
+
+    void main( )
+    {
+      // uncomment to enable pixelated bg
+      // float pixel_size = length(iResolution.xy)/PIXEL_SIZE_FAC;
+      float pixel_size = 1.0;
+      vec2 uv = (floor(gl_FragCoord.xy*(1./pixel_size))*pixel_size - 0.5*iResolution.xy)/length(iResolution.xy) - vec2(0.12, 0.);
+      
+      float uv_len = length(uv);
+      
+      float speed = (spin_time*SPIN_EASE*0.2) + 302.2;
+      float new_pixel_angle = (atan(uv.y, uv.x)) + speed - SPIN_EASE*20.*(1.*spin_amount*uv_len + (1. - 1.*spin_amount));
+      
+      vec2 mid = vec2(0.5, 0.5);
+      uv = (vec2((uv_len * cos(new_pixel_angle) + mid.x), (uv_len * sin(new_pixel_angle) + mid.y)) - mid);
+      
+      uv *= 30.;
+      speed = iTime*(2.);
+      vec2 uv2 = vec2(uv.x+uv.y);
+
+      for(int i=0; i < 5; i++) {
+        uv2 += sin(max(uv.x, uv.y)) + uv;
+        uv  += 0.5*vec2(cos(5.1123314 + 0.353*uv2.y + speed*0.131121),sin(uv2.x - 0.113*speed));
+        uv  -= 1.0*cos(uv.x + uv.y) - 1.0*sin(uv.x*0.711 - uv.y);
+      }
+      
+      float contrast_mod = (0.25*contrast + 0.5*spin_amount + 1.2);
+      float paint_res =min(2., max(0.,length(uv)*(0.035)*contrast_mod));
+      float c1p = max(0.,1. - contrast_mod*abs(1.-paint_res));
+      float c2p = max(0.,1. - contrast_mod*abs(paint_res));
+      float c3p = 1. - min(1., c1p + c2p);
+
+      // Output to screen
+      gl_FragColor = (0.3/contrast)*colour_1 + (1. - 0.3/contrast)*(colour_1*c1p + colour_2*c2p + vec4(c3p*colour_3.rgb, c3p*colour_1.a));
+    }
+  </script>
+  <script src="../bgShader.js"></script>
+  <script src="../global.js"></script>
+</body>
+</html>

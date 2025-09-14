@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../global.css">
+    <link rel="icon" type="image/x-icon" href="../media/favicon.png">
+    <title>DeBread's Space - THE SERVER</title>
+</head>
+<body>
+    <div id="crtOverlay"></div>
+    <div id="loadingEmblemContainer">
+        <img src="../media/emblem.svg" width="100" id="loadingEmblem">
+    </div>
+    <div id="loadingScreenContainer">
+        <div id="loadingScreen"></div>
+    </div>
+
+    <button onclick="gotoPage('home')" class="goBackButton">
+      <svg style="min-width: 24px !important; min-height: 24px !important;" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l4 4" /><path d="M5 12l4 -4" /></svg>
+      Go back
+    </button>
+
+    <div id="titleContainer">
+      <div id="innerTitle">
+        <img src="../media/server/title.png" width="500">
+        <div id="splashContainer"> <!--Zero width, centered-->
+          <div id="innerSplashContainer"> <!--Gives width to span-->
+            <span id="splash">-</span>
+          </div>
+        </div>
+      </div>
+      <div id="blocks"></div>
+    </div>
+
+    <div style="margin: 0px var(--pageMargin);">
+      <div id="downloadButton">
+        <a href="../media/guy.png" download="CHANGETHISTOTHENORMALZIP">DOWNLOAD INFO ZIP</a>
+      </div>
+
+      <h1>THE SERVER</h1>
+      <span>'THE SERVER' is a modded Minecraft server originally made for my Computer Service Technology class<sup onclick="gotoPage('aboutme')" title="Visit 'About Me'">?</sup>, but due to the lack of members, we opened it to the public. It has been given regular updates about once every month or so, adding content mods and fixing performance issues.</span>
+
+      <h1>The people who make it happen</h1>
+      <div id="cardContainer">
+        <div class="playerCard">
+          <div class="cardContent">
+            <div>
+              <span class="cardTitle"><strong style="color: lime;">[SERVER TECHNICIAN]</strong> fordaven</span>
+              <em style="color: grey;">udev</em>
+              <br><span style="margin-top: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora labore iste ipsum quaerat culpa earum accusamus accusantium ad id hic placeat nulla blanditiis, ratione, et, nisi voluptas sunt quasi architecto.</span>
+            </div>
+              
+            <div class="cardImageContainer">
+              <img src="../media/server/card0.png">
+            </div>
+          </div>
+          <div class="cardBG">
+            <div style="background-image: url(../media/server/box/topleft.png);"></div>
+            <div style="background-image: url(../media/server/box/topmiddle.png);"></div>
+            <div style="background-image: url(../media/server/box/topright.png);"></div>
+            <div style="background-image: url(../media/server/box/middleleft.png);"></div>
+            <div style="background-color: #212121;"></div>
+            <div style="background-image: url(../media/server/box/middleright.png);"></div>
+            <div style="background-image: url(../media/server/box/bottomleft.png);"></div>
+            <div style="background-image: url(../media/server/box/bottommiddle.png);"></div>
+            <div style="background-image: url(../media/server/box/bottomright.png);"></div>
+          </div>
+        </div>
+        <div class="playerCard">
+          <div class="cardContent">
+            <div>
+              <span class="cardTitle"><strong style="color: orange;">[OWNER]</strong> NotDeBread</span>
+              <em style="color: grey;">DeBread</em>
+              <br><span style="margin-top: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora labore iste ipsum quaerat culpa earum accusamus accusantium ad id hic placeat nulla blanditiis, ratione, et, nisi voluptas sunt quasi architecto.</span>
+            </div>
+              
+            <div class="cardImageContainer">
+              <img src="../media/server/card1.png">
+            </div>
+          </div>
+          <div class="cardBG">
+            <div style="background-image: url(../media/server/box/topleft.png);"></div>
+            <div style="background-image: url(../media/server/box/topmiddle.png);"></div>
+            <div style="background-image: url(../media/server/box/topright.png);"></div>
+            <div style="background-image: url(../media/server/box/middleleft.png);"></div>
+            <div style="background-color: #212121;"></div>
+            <div style="background-image: url(../media/server/box/middleright.png);"></div>
+            <div style="background-image: url(../media/server/box/bottomleft.png);"></div>
+            <div style="background-image: url(../media/server/box/bottommiddle.png);"></div>
+            <div style="background-image: url(../media/server/box/bottomright.png);"></div>
+          </div>
+        </div>
+        <div class="playerCard">
+          <div class="cardContent">
+            <div>
+              <span class="cardTitle"><strong style="color: aqua;">[OPERATOR]</strong> TheTrueSkywalkr</span>
+              <em style="color: grey;">TrueSkywalkr</em>
+              <br><span style="margin-top: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora labore iste ipsum quaerat culpa earum accusamus accusantium ad id hic placeat nulla blanditiis, ratione, et, nisi voluptas sunt quasi architecto.</span>
+            </div>
+              
+            <div class="cardImageContainer">
+              <img src="../media/server/card2.png">
+            </div>
+          </div>
+          <div class="cardBG">
+            <div style="background-image: url(../media/server/box/topleft.png);"></div>
+            <div style="background-image: url(../media/server/box/topmiddle.png);"></div>
+            <div style="background-image: url(../media/server/box/topright.png);"></div>
+            <div style="background-image: url(../media/server/box/middleleft.png);"></div>
+            <div style="background-color: #212121;"></div>
+            <div style="background-image: url(../media/server/box/middleright.png);"></div>
+            <div style="background-image: url(../media/server/box/bottomleft.png);"></div>
+            <div style="background-image: url(../media/server/box/bottommiddle.png);"></div>
+            <div style="background-image: url(../media/server/box/bottomright.png);"></div>
+          </div>
+        </div>    
+    </div>
+
+    <script src="../DeBread.js"></script>
+    <script src="script.js"></script>
+    <script src="../global.js"></script>
+</body>
+</html>

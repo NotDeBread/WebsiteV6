@@ -1,0 +1,199 @@
+:root {
+    --pageMargin: 250px;
+}
+
+@font-face {
+    font-family: minecraft;
+    src: url(../media/fonts/minecraft.otf);
+}
+
+body {
+    margin: 0;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+sup {
+    cursor: pointer;
+    color: var(--accent);
+}
+
+sup:hover {
+    text-decoration: underline;
+}
+
+#titleContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    background-image: url(../media/server/panorama.png);
+    animation: panorama 60s linear infinite forwards;
+}
+
+@keyframes panorama {
+    to {
+        background-position: 1000px 0px;
+    }
+}
+
+#innerTitle {
+    position: relative;
+}
+
+#splashContainer {
+    width: 0px;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    rotate: -7deg;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+#innerSplashContainer {
+    position: absolute;
+    width: 500px;
+    animation: splash 250ms ease-out infinite alternate-reverse;
+}
+
+@keyframes splash {
+    from {
+        scale: 1;
+    }   
+    to {
+        scale: 1.1;
+    }
+}
+
+#splash {
+    color: yellow;
+    filter: drop-shadow(2.7px 2.7px rgb(50, 50, 0));
+    font-family: minecraft;
+    max-width: 500px;
+    font-size: 24px;
+}
+
+#blocks {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-image: url(../media/server/blocks.png);
+    height: 32px;
+}
+
+#downloadButton {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+#downloadButton a {
+    font-family: minecraft;
+    font-weight: 900;
+    padding: 15px;
+    font-size: 18px;
+    color: white;
+    outline: 1px solid white;
+}
+
+#downloadButton a:hover {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+}
+
+#cardContainer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.playerCard {
+    position: relative;
+    width: 400px;
+    height: 450px;
+}
+
+.cardContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    z-index: 2;
+    padding: 10px;
+    font-family: minecraft;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cardTitle {
+    font-size: 1.25em;
+    background-color: rgb(0,0,0,.5);
+    padding: 2px;
+}
+
+.cardBG {
+    display: grid;
+    grid-template-columns: 8px 1fr 8px;
+    grid-template-rows: 8px 1fr 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.cardImageContainer {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 1500px) {
+    :root {
+        --pageMargin: 25px;
+    }
+
+    #innerTitle {
+        scale: 0.75;
+    }
+}
+
+@media (max-width: 1100px) {
+    :root {
+        --pageMargin: 10px;
+    }
+
+    #cardContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .playerCard {
+        width: 100%;
+    }
+
+    #splashContainer {
+        display: none;
+    }
+}
+
+@media (max-width: 350px) {
+    .playerCard {
+        height: 500px;
+    }
+
+    #innerTitle {
+        scale: 0.6;
+    }
+}
