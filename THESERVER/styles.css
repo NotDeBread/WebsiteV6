@@ -92,10 +92,11 @@ sup:hover {
 #downloadButton {
     margin-top: 25px;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-#downloadButton a {
+#innerDownloadButton {
     font-family: minecraft;
     font-weight: 900;
     padding: 15px;
@@ -104,7 +105,7 @@ sup:hover {
     outline: 1px solid white;
 }
 
-#downloadButton a:hover {
+#innerDownloadButton:hover {
     background-color: white;
     color: black;
     text-decoration: none;
@@ -119,7 +120,7 @@ sup:hover {
 .playerCard {
     position: relative;
     width: 400px;
-    height: 450px;
+    height: 475px;
 }
 
 .cardContent {

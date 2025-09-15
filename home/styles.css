@@ -437,6 +437,10 @@
 
 @media (max-width: 750px) {
 
+    :root {
+        --pageMargin: 10px
+    }
+
     .mobileIncompatible {
         display: none;
     }
