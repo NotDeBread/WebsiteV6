@@ -38,6 +38,25 @@ wavey {
     animation: wavey 1s ease-in-out delay infinite forwards;
 }
 
+imgCarrossel {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    max-width: 500px;
+}
+
+imgCarrossel button {
+    min-width: 30px;
+    max-width: 50px;
+    font-weight: 900;
+    font-size: 1.5em;
+}
+
+imgCarrossel img {
+    height: 225px;
+    cursor: pointer;
+}
+
 coolLine {
     width: 100%;
     height: 1px;
