@@ -33,7 +33,10 @@ function deleteData() {
 }
 
 //Loading screen stuff
+let loadingFinished = false
+let loadingSkipped = false
 function finishLoading() {
+    loadingFinished = true
     const randomRot = DeBread.randomNum(0,360)
     const screen = doge('loadingScreen')
     const emblem = doge('loadingEmblem')
@@ -59,7 +62,9 @@ function finishLoading() {
                     const day = currentDate.getDate()
 
                     const textbox = textboxBase.cloneNode()
-                    if(day === 25 && month === 12) {
+                    if(loadingSkipped) {
+                        textbox.innerHTML = 'My bad, the loading screen bugged out for some reason.'
+                    } else if(day === 25 && month === 12) {
                         const chistmasTexts = [
                             'Merry Christmas!',
                             'Get jolly!',
@@ -83,7 +88,7 @@ function finishLoading() {
 
                     textbox.timeout = setTimeout(() => {
                         textbox.remove()
-                    }, 3000);
+                    }, 4000);
                 }, 100);
             }
         }, 750);
@@ -96,12 +101,19 @@ if(!['/',''].includes(window.location.pathname)) {
     finishLoading()
 }
 
+setTimeout(() => {
+    if(!loadingFinished) {
+        finishLoading()
+        loadingSkipped = true
+        console.warn('Seems like it took too long to load. Hiding loading screen anyways.')
+    }
+}, 5000);
+
 if(currentDate.getMonth()+1 >= 11 || currentDate.getMonth()+1 <= 2) {
     if(doge('guy')) {
         doge('guy').src = '../media/guyWinter.png'
     }
     document.body.style.setProperty('--accent','rgb(144, 233, 255)')
-    console.log('wow')
 }
 
 function gotoPage(page, absoluteURL) {
@@ -153,6 +165,48 @@ document.querySelectorAll('wavey').forEach(elem => {
 
         iterations++
     }
+})
+
+document.querySelectorAll('imgCarrossel').forEach(elem => {
+    let imgProgress = 0
+    let imgs = elem.getAttribute('imgCount') - 1
+
+    //Init
+    const prevButton = document.createElement('button')
+    prevButton.classList.add('imgCarrosselButton')
+    prevButton.innerText = '<'
+    prevButton.onclick = () => {
+        if(imgProgress - 1 < 0) {
+            imgProgress = imgs
+        } else {
+            imgProgress--
+        }
+        updateImg()
+    }
+    elem.append(prevButton)
+
+    const img = document.createElement('img')
+    elem.append(img)
+
+    const nextButton = document.createElement('button')
+    nextButton.classList.add('imgCarrosselButton')
+    nextButton.innerText = '>'
+    nextButton.onclick = () => {
+        if(imgProgress + 1 > imgs) {
+            imgProgress = 0
+        } else {
+            imgProgress++
+        }
+        updateImg()
+    }
+    elem.append(nextButton)
+
+    function updateImg() {
+        img.src = `${elem.getAttribute('folderPath')}/${imgProgress}.png`
+        img.onclick = () => {
+            openImage(`${elem.getAttribute('folderPath')}/${imgProgress}.png`)
+        }
+    } updateImg()
 })
 
 setInterval(() => {

@@ -111,16 +111,34 @@ sup:hover {
     text-decoration: none;
 }
 
+.header {
+    font-size: 2em;
+    font-weight: 700;
+}
+
 #cardContainer {
     display: flex;
     justify-content: center;
     gap: 10px;
+    margin-bottom: 50px;
 }
 
 .playerCard {
     position: relative;
-    width: 400px;
+    width: 100%;
     height: 475px;
+}
+
+.genericCardRow {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.genericCard {
+    position: relative;
+    height: 400px;
+    width: 100%;
 }
 
 .cardContent {
@@ -135,6 +153,31 @@ sup:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.genericCardContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    z-index: 2;
+    padding: 10px;
+    font-family: minecraft;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.genericCardContent imgCarrossel {
+    outline: 4px solid rgb(85, 85, 85);
+    margin: 4px;
+    background-color: rgb(33, 33, 33);
+    margin-top: 5px;
+}
+
+.genericCardContent imgCarrossel button {
+    outline: 4px solid rgb(85, 85, 85);
 }
 
 .cardTitle {
@@ -160,13 +203,39 @@ sup:hover {
     justify-content: center;
 }
 
-@media (max-width: 1500px) {
+.cardHeaderContainer {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.cardHeader {
+    font-size: 2em;
+    white-space: nowrap;
+}
+
+.cardEm {
+    color: grey;
+}
+
+@media (max-width: 1750px) {
     :root {
-        --pageMargin: 25px;
+        --pageMargin: 25px
     }
+}
+
+@media (max-width: 1500px) {
+    /* :root {
+        --pageMargin: 25px;
+    } */
 
     #innerTitle {
         scale: 0.75;
+    }
+    
+    .genericCardRow {
+        flex-direction: column;
     }
 }
 
@@ -187,6 +256,17 @@ sup:hover {
     #splashContainer {
         display: none;
     }
+
+    .genericCard {
+        height: 500px;
+    }
+}
+
+@media (max-width: 750px) {
+    imgCarrossel img {
+        width: 100%;
+        height: unset !important;
+    }
 }
 
 @media (max-width: 350px) {
@@ -194,7 +274,13 @@ sup:hover {
         height: 500px;
     }
 
+
     #innerTitle {
         scale: 0.6;
     }
+}
+
+#haroldContainer {
+    display: flex;
+    justify-content: center;
 }
