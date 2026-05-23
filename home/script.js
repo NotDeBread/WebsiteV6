@@ -156,6 +156,7 @@ function scrollToElem(elem) {
 const featuredDrawings = {
     Angelos: 1,
     Baxter: 1,
+    Case: 1,
     Cherry: 1,
     Chow: 2,
     Dottr: 5,
@@ -275,6 +276,10 @@ const randomFeaturedDrawings = [
   },
   {
     "artist": "Unknown",
+    "num": 0
+  },
+  {
+    "artist": "Case",
     "num": 0
   },
   {
