@@ -486,6 +486,21 @@ const tracks = {
         artist: 'xi',
         hit: [83,126],
     },
+    Box_in_a_Box: {
+        name: 'Box in a Box',
+        artist: 'Daniel Pemberton',
+        hit: [180,265],
+    },
+    Time_Go_Fishing: {
+        name: 'Time Go Fishing',
+        artist: 'Daniel Pemberton',
+        hit: [180,265],
+    },
+    Centrifuge: {
+        name: 'Centrifuge',
+        artist: 'Daniel Pemberton',
+        hit: [180,265],
+    },
     // jaden: {
     //     name: 'jaden',
     //     artist: 'jaden',
