@@ -674,25 +674,28 @@ function updateTrackTooltip(label, value) {
     tooltip([doge('musicPlayerFooter').getBoundingClientRect().left,doge('musicPlayerFooter').getBoundingClientRect().top],`${label}: ${value}`, false)
 }
 
-for(const key in tracks) {
-    const audio = new Audio(`../media/music/${key}/audio.mp3`)
-    const listTrack = document.createElement('div')
-    listTrack.classList.add('track')
-
-    audio.onloadeddata = () => {
-        listTrack.innerHTML = `
-            <div style="display: flex; gap: 5px;">
-                <img src="../media/music/${key}/cover.png">
-                <div class="trackInfo">
-                    <span>${tracks[key].name}</span>
-                    <span>${tracks[key].artist}</span>
-                </div>
-            </div>
-            <span>${formatTime(DeBread.round(audio.duration))}</span>
-        `
+function loadTracks() {
+    doge('trackListContainer').innerHTML = ''
+    for(const key in tracks) {
+        const audio = new Audio(`../media/music/${key}/audio.mp3`)
+        const listTrack = document.createElement('div')
+        listTrack.classList.add('track')
     
-        doge('trackListContainer').append(listTrack)
-        listTrack.onclick = () => {openTrack(key)}
+        audio.onloadeddata = () => {
+            listTrack.innerHTML = `
+                <div style="display: flex; gap: 5px;">
+                    <img src="../media/music/${key}/cover.png">
+                    <div class="trackInfo">
+                        <span>${tracks[key].name}</span>
+                        <span>${tracks[key].artist}</span>
+                    </div>
+                </div>
+                <span>${formatTime(DeBread.round(audio.duration))}</span>
+            `
+        
+            doge('trackListContainer').append(listTrack)
+            listTrack.onclick = () => {openTrack(key)}
+        }
     }
 }
 
