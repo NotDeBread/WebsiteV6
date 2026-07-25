@@ -627,3 +627,13 @@ function applyFlowText(elem,speedMult = 1) {
         }, (i * 25) / speedMult + 5);
     }
 }
+
+function getWeightedChance(weights) {
+    const total = weights.reduce((a, b) => a + b, 0)
+    let randomNum = DeBread.randomNum(0, total, 100)
+
+    for (let i = 0; i < weights.length; i++) {
+        if (randomNum < weights[i]) return i
+        randomNum -= weights[i]
+    }
+}

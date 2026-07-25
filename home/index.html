@@ -61,7 +61,7 @@
     <div id="main">
         <div id="dbTitleContainer">
             <div id="dbTitle" style="height: 35px;">DeBread's Space</div>
-            <span><a href="https://github.com/NotDeBread/WebsiteV7" target="_blank" style="color: white;">v7-pre11</a> - The rebrand is real</span>
+            <span><a href="https://github.com/NotDeBread/WebsiteV7" target="_blank" style="color: white;">v7-pre12</a> - The rebrand is real</span>
         </div>
         <div id="innerMain">
             <div class="mainSection">
@@ -73,7 +73,7 @@
                         <coolLine></coolLine>
                     </div>
                     <div style="display: flex;">
-                        <span>Hi! Welcome to my page! I'm DeBread and I make a bunch of silly things like web games and modpacks for a bunch of different games. This page is currently a <span style="color: yellow;">work in progress</span> and will be finished fully soon! Check out the <a onclick="scrollToElem(doge('newsSection'))">News</a> section if you want to see what I've been working on!</span>
+                        <p class="genericBodyText">Hi! Welcome to my page! I'm DeBread and I make a bunch of silly things like web games and modpacks for a bunch of different games. This page is currently a <span style="color: yellow;">work in progress</span> and will be finished fully soon! Check out the <a onclick="scrollToElem(doge('newsSection'))">News</a> section if you want to see what I've been working on!</p>
                         <img id="welcomeImg" src="../media/hi.png" style="cursor: pointer; translate: 5px 5px;" onclick="DeBread.playSound('../media/audio/splat.mp3', 0.1)">
                     </div>
                 </div>
@@ -81,7 +81,7 @@
                     <img src="../media/notads/2Text.png" style="position: absolute; left: 0; top: 0;">
                     <img src="../media/notads/2Guy.png" style="position: absolute; right: 0; top: 0;">
                 </a>
-                <div class="genericBox" id="newsSection">
+                <div class="genericBox" id="newsSection"> <!--Yeah i know this is stupid because it isnt server-side-->
                     <div class="genericHeader">
                         <img src="../media/icons/mail.png">
                         <span>NEWS</span>
@@ -90,13 +90,26 @@
                     <div id="newsContainer">
                         <div class="news">
                             <div class="newsHeader">
+                                <span class="newsTitle">Artfight is real</span>
+                                <coolLine></coolLine>
+                                <em>7/22/2026</em>
+                            </div>
+                            <p class="genericBodyText">
+                                I started doing artfight for the first time this year! Check out <a>my profile</a> for all of the stuff I've made so far! (Maybe I'll even attack you 👀)
+                            </p>
+                            <div style="display: flex; justify-content: center; gap: 5px;">
+                                <img src="../games/GooberShooter2/graphics/credits/fellaDrawing.gif" width="160">
+                            </div>
+                        </div>
+                        <div class="news">
+                            <div class="newsHeader">
                                 <span class="newsTitle">Buy Me a Coffee page out!</span>
                                 <coolLine></coolLine>
                                 <em>3/30/2026</em>
                             </div>
-                            <span class="newsBody">
-                                If you would like to support me on my work, you can click <a href="https://buymeacoffee.com/debread">here</a>! Please I need to afford colleg :(
-                            </span>
+                            <p class="genericBodyText">
+                                If you would like to support me or my work, you can click <a href="https://buymeacoffee.com/debread">here</a>! Please I need to afford colleg :(
+                            </p>
                         </div>
                         <div class="news">
                             <div class="newsHeader">
@@ -104,9 +117,9 @@
                                 <coolLine></coolLine>
                                 <em>3/30/2026</em>
                             </div>
-                            <span class="newsBody">
+                            <p class="genericBodyText">
                                 It's finally time! Goober Shooter 2 is now availble for anyone to playtest. You can download the latest version <a href="https://github.com/NotDeBread/GooberShooter2" target="_blank">here</a>. If you encounter any bugs or issues, <strong>please</strong> fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSf_GAA_YzyjWLG1JQPlvc0W4UmAuAWE9o3mhYgEs9rPqLpI7g/viewform" target="_blank">Google Form</a>.
-                            </span>
+                            </p>
                         </div>
                         <div class="news">
                             <div class="newsHeader">
@@ -114,9 +127,9 @@
                                 <coolLine></coolLine>
                                 <em>3/3/2026</em>
                             </div>
-                            <span class="newsBody">
+                            <p class="genericBodyText">
                                 It has been a while since I've posted here... Since the last post, I've made a lot of progress Goober Shooter 2! Recently I joined a <a href="https://www.skillsusa.org/" target="_blank">SkillsUSA</a> championship for 'Interactive Application and Video Game Development' through my technical school, and I'm planning using Goober Shooter 2 as my game! Because of this I now have to meet a new dealine before the championship, <strong>Sometime in early April</strong> (My teacher isn't sure yet 😭). <br> For progress updates, join my <a href="https://discord.gg/Vhd662Pn9A" target="_blank">Discord Server</a>
-                            </span>
+                            </p>
                         </div>
                         <div class="news">
                             <div class="newsHeader">
@@ -124,12 +137,12 @@
                                 <coolLine></coolLine>
                                 <em>1/14/2026</em>
                             </div>
-                            <span class="newsBody">
+                            <p class="genericBodyText">
                                 Season two of THE SERVER sucked, the modpack was very poorly put together a it performed like hot garbage. Season three plans to have more of a "vanilla+" feel to it, with less focus on content mods and more focus on QoL mods. Season two will be closing on Tuesday, January 13th, 6:00PM CST with a final Ender Dragon fight with everyone. If you are interesting on joining, click <a href="../THESERVER/">here</a>.
                                 <div style="display: flex; justify-content: center; margin-top: 10px;">
                                     <img src="../media/server/title2.png" width="300" style="image-rendering: unset; max-width: 100%;">
                                 </div>
-                            </span>
+                            </p>
                         </div>
                         <div class="news">
                             <div class="newsHeader">
@@ -137,9 +150,9 @@
                                 <coolLine></coolLine>
                                 <em>1/14/2026</em>
                             </div>
-                            <span class="newsBody">
+                            <p class="genericBodyText">
                                 Since I'm never happy with the look of my website, I remade it again for the seventh time! This one is inspired by old style websites, mostly similar to neocities websites. Some of the specific sites I used as inspiration are included in the <a onclick="scrollToElem(doge('sitesSection'))">Inspiration section</a> section under the navigator.
-                            </span>
+                            </p>
                         </div>
                         <div class="news">
                             <div class="newsHeader">
@@ -147,9 +160,9 @@
                                 <coolLine></coolLine>
                                 <em>1/14/2026</em>
                             </div>
-                            <span class="newsBody">
+                            <p class="genericBodyText">
                                 For awhile, Goober Shooter has been my biggest <em>public</em> project. But for the past few months I've been working on it's sequel, Goober Shooter 2 (i know very creative right). More information about the game will be posted here in the future, but in the meantime, you can check out the #goober-shooter channel in my <a href="https://discord.gg/ecCBTRD2hN" target="_blank">Discord Server</a> for progress posts!
-                            </span>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -168,7 +181,7 @@
                             <div style="padding: 5px; display: flex; flex-direction: column; justify-content: space-between;">
                                 <div class="featuredProjectTitle">
                                     <span>Goober Shooter 2</span>
-                                    <span>The sequel to Goober Shooter, now with new characters, items, weapons, and way more. Currently in its playtest phase.</span>
+                                    <p class="genericBodyText">The sequel to Goober Shooter, now with new characters, items, weapons, and way more. Currently in its playtest phase.</p>
                                 </div>
                                 <div class="featuredProjectButtons">
                                     <a href="../games/GooberShooter2/">
@@ -187,7 +200,7 @@
                             <div style="padding: 5px; display: flex; flex-direction: column; justify-content: space-between;">
                                 <div class="featuredProjectTitle">
                                     <span>Winnie Accumulator</span>
-                                    <span>An idle game where you collect large amounts of Winnie Orbs. Sources say this is better than Cookie Clicker.</span>
+                                    <p class="genericBodyText">An idle game where you collect large amounts of Winnie Orbs. Sources say this is better than Cookie Clicker.</p>
                                 </div>
                                 <div class="featuredProjectButtons">
                                     <a href="../games/WinnieAccumulator/">
@@ -204,12 +217,15 @@
                                 <div class="featuredProjectTitle">
                                     <div style="display: flex; gap: 5px;">
                                         <span>THE SERVER</span>
+                                        <div style="background-color: rgb(151, 0, 45); font-size: 0.9em; padding: 0px 3px; border-radius: 5px;">
+                                            <span>DEPRECATED</span>
+                                        </div>
                                         <div id="serverMemberCount">
                                             <div style="width: 5px; height: 5px; border-radius: 50%; background-color: grey;" id="onlineMemberCircle"></div>
                                             <span id="onlineMemberCount">fetching...</span>
                                         </div>
                                     </div>
-                                    <span>The sequel of my old modded Minecraft server, which was originally for just my computer servicing class, but eventually made public.</span>
+                                    <p class="genericBodyText">The sequel of my old modded Minecraft server, which was originally for just my computer servicing class, but eventually made public.</p>
                                 </div>
                                 <div class="featuredProjectButtons">
                                     <a href="../THESERVER/">
@@ -299,7 +315,7 @@
                     <div id="faotdContainer">
                         <img src="../media/featuredDrawings/Erix/0.png" id="faotdImg">
                         <span id="faotdArtist">Drawn by ?</span>
-                        <a href="https://discord.gg/uGyyqRVZPD" target="_blank">Send a drawing</a>
+                        <a href="https://discord.com/invite/ecCBTRD2hN" target="_blank">Send a drawing</a>
                     </div>
                 </div>
                 <div class="genericBox">
@@ -310,13 +326,13 @@
                         <coolLine></coolLine>
                     </div>
                     <div id="topHitContainer">
-                        <img src="../media/music/Sketches_of_Pain/cover.png" width="50">
+                        <img src="../media/music/Dragon_Driftway/cover.png" width="50">
                         <div id="topHitInfo">
-                            <span>Sketches of Pain</span>
-                            <span>By: Rediculon</span>
+                            <span>Dragon Driftway</span>
+                            <span>By: Kenta Nagata</span>
                         </div>
                     </div>
-                    <button id="topHitButton" onclick="scrollToElem(doge('musicPlayerContainer'));openTrack('Sketches_of_Pain')">Open in music player</button>
+                    <button id="topHitButton" onclick="scrollToElem(doge('musicPlayerContainer'));openTrack('Dragon_Driftway')">Open in music player</button>
                 </div>
                 <div class="genericBox">
                     <div id="navigator">
@@ -326,10 +342,11 @@
                             About
                             <coolLine></coolLine>
                         </div>
-                        <a href="../home/">Home</a>
-                        <a style="color: grey;" onclick="fellaClick('Hey that isn\'t ready yet.', true)">About me</a>
+                        <a style="color: white;">Home (YOU ARE HERE)</a>
+                        <a href="../aboutme/">About me</a>
                         <a style="color: grey;" onclick="fellaClick('Hey that isn\'t ready yet.', true)">Projects</a>
                         <a style="color: grey;" onclick="fellaClick('Hey that isn\'t ready yet.', true)">Gallery</a>
+                        <a href="../GooberShooter2/">Goober Shooter 2</a>
 
                         <div class="genericHeader">
                             <coolLine></coolLine>
@@ -344,6 +361,7 @@
                         <a target="_blank" href="https://yeen.town/@debread">YEEN TOWN</a>
                         <a target="_blank" href="https://youtube.com/notdebread">YouTube</a>
                         <a target="_blank" href="https://github.com/NotDeBread">GitHub</a>
+                        <a target="_blank" href="https://artfight.net/~DeBread">Artfight</a>
                         <br>
                         <a target="_blank" href="https://buymeacoffee.com/debread">Support me!</a>
                         <div class="genericHeader">
@@ -412,7 +430,33 @@
                         <a href="https://ne0nbandit.neocities.org/" target="_blank"><img src="https://ne0nbandit.github.io/assets/img/btn/mine/nbbanner.png"></a>
                         <a href="https://swiftyshq.neocities.org/" target="_blank"><img src="https://swiftyshq.neocities.org/img/res/aff/swsign.png" alt="Swifty's HQ!"></a>
                         <a href="https://ninacti0n.art/" target="_blank"><img src="../media/chips/ninacti0n.gif"></a>
+                        <a href="https://jbc.lol/" target="_blank"><img src="https://jbc.lol/sitebuttonv2.png"></a>
+                        <a href="https://dabric.xyz/" target="_blank"><img src="https://dabric.xyz/butt.png" alt="dabric" width="81" height="33"></a>
                     </div>
+                </div>
+                <div class="genericBox" style="min-height: 128px;" id="randomImageBox">
+                    <div class="genericHeader" style="margin-top: 5px;">
+                        <coolLine></coolLine>
+                        <img src="../media/icons/web.png">
+                        Random Image
+                        <coolLine></coolLine>
+                    </div>
+
+                    <div id="randomImageContainer">
+                        <img id="randomImage" src="../media/fella.png">
+                    </div>
+                    <div style="display: flex; align-items: center; flex-direction: column;">
+                        <span id="randomImageRarity">-</span>
+                        <span id="randomImageAuthor">Submitted by: -</span>
+                    </div>
+
+                    <div id="crankContainer">
+                        <div id="crank" onclick="rollRandomImage()"></div>
+                    </div>
+                </div>
+                <div class="genericBox">
+                    <span id="dataCommitNum">Running on commit ?</span><br>
+                    <span id="dataReleaseNum">Released on ?</span>
                 </div>
             </div>
         </div>

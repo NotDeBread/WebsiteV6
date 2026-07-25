@@ -7,20 +7,43 @@
     flex-direction: column;
 }
 
-#charactersContainer {
-    display: flex;
-    gap: 5px;
-}
-
-.characterButton {
-    padding: 5px;
-    gap: 5px;
-    outline: 1px solid grey;
+#searchContainer {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
-.characterButton img {
+#searchContainer input {
+    background-color: transparent;
+    color: white;
+    font-family: monospace;
+    width: 200px;
+    height: 20px;
+    border: 2px solid var(--outlineDark);
+}
+
+#searchContainer input:focus {
+    outline: none;
+}
+
+#imageListContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    margin: 25px;
+}
+
+.imageCard {
     width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.imageCard img {
+    width: 64px;
+    height: 64px;
+    image-rendering: pixelated;
 }

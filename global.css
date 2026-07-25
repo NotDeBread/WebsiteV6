@@ -9,8 +9,9 @@
 
 :root {
     --accent: rgb(175, 122, 255);
-    --outlineDark: rgb(75,75,75);
+    --outlineDark: rgb(67, 67, 67);
     --boxBorderRadius: 0px;
+    --pageWidth: 1000px;
 }
 
 body {
@@ -21,6 +22,7 @@ body {
     background-color: black;
     scrollbar-width: thin;
     margin: 0;
+    image-rendering: pixelated;
 }
 
 mono {
@@ -128,6 +130,8 @@ button:active {
     }
 }
 
+/* Generic Stuff */
+
 .genericBox {
     border: 2px solid var(--outlineDark);
     background-color: rgb(0,0,0,0.5);
@@ -148,6 +152,94 @@ button:active {
     height: 20px;
     margin-bottom: 5px;
 }
+
+.genericBodyText {
+    color: lightgray;
+    text-indent: 2em;
+    margin: 10px 0px;
+}
+
+.mainSection {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#innerMain .genericBox {
+    width: calc(100% - 14px);
+}
+
+#dbTitleContainer {
+    width: var(--pageWidth);
+    margin-bottom: 50px;
+}
+
+#dbTitle {
+    font-weight: 900;
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: var(--accent);
+    font-family: "Poppins", sans-serif;
+}
+
+#main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    margin: 100px 0px;
+}
+
+#innerMain {
+    width: var(--pageWidth);
+    display: flex;
+    gap: 5px;
+}
+
+#innerMain .mainSection:nth-child(1) {
+    width: 70%;
+}
+
+#innerMain .mainSection:nth-child(2) {
+    width: 30%;
+}
+
+#navigator {
+    display: flex;
+    flex-direction: column;
+}
+
+#navigator a {
+    user-select: none;
+    padding: 2px 0px;
+    transition: background-color ease-in-out 100ms, padding ease-in-out 100ms;
+}
+
+#navigator a:hover {
+    padding: 2px 2px;
+    background-color: rgb(50,50,50,0.5);
+}
+
+#navigator a:active {
+    background-color: rgb(75,75,75,0.5);
+}
+
+.chipContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.chipContainer a {
+    transition: scale ease-in-out 250ms;
+}
+
+.chipContainer a:hover {
+    scale: 1.5;
+}
+
+/* Achievement stuff */
 
 #achievementsButton {
     position: fixed;
@@ -228,6 +320,7 @@ button:active {
 }
 
 /* Crt overlay */
+/* Now unused */
 #crtOverlay {
     position: fixed;
     top: 0;
@@ -238,57 +331,13 @@ button:active {
     user-select: none;
     z-index: 10;
     background-image: url(../media/crtOverlay.png);
-    opacity: 0.1;
+    opacity: 0;
     image-rendering: pixelated;
     mix-blend-mode: multiply;
     transition: opacity 1s;
 }
 
 /* Loading screen */
-/* #loadingScreenContainer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100dvw;
-    height: 100dvh;
-    user-select: none;
-    z-index: 8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    cursor: wait;
-}
-
-#loadingScreen {
-    width: 100vmax;
-    height: 100vmax;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    aspect-ratio: 1 / 1;
-    background-color: rgb(10,10,10);
-    transition: width ease-out 1250ms, height ease-out 1250ms;
-    scale: 1.5;
-}
-
-#loadingEmblemContainer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100dvw;
-    height: 100dvh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9;
-}
-
-#loadingEmblem {
-    width: 100px;
-    transition: scale cubic-bezier(.25,0,.75,-0.25) 750ms;
-    user-select: none;
-} */
 
 #loadingScreenContainer {
     position: fixed;
@@ -409,5 +458,47 @@ button:active {
 @keyframes scaleOut {
     to {
         scale: 0;
+    }
+}
+
+@media (max-width: 1000px) {
+    :root {
+        --pageWidth: 90dvw;
+    }
+
+    #main {
+        margin-bottom: 175px;
+    }
+
+    #innerMain {
+        flex-direction: column;
+    }
+
+    #innerMain .mainSection:nth-child(1) {
+        width: 100%;
+    }
+
+    #innerMain .mainSection:nth-child(2) {
+        width: 100%;
+    }
+
+    #navigator {
+        flex-direction: unset;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    #navigator .genericHeader {
+        width: 100%;
+    }
+
+    #navigator a {
+        padding: 4px;
+        outline: 1px solid var(--outlineDark);
+        transition: background-color ease-in-out 100ms, padding ease-in-out 100ms;
+    }
+
+    #navigator a:hover {
+        padding: 4px;
     }
 }

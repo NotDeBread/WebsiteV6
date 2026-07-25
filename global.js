@@ -387,3 +387,24 @@ function applyFlowText(elem,speedMult = 1) {
         }, (i * 25) / speedMult + 5);
     }
 }
+
+function refreshWebsiteData() {
+    if(doge('dataCommitNum')) {
+        //Commits
+        fetch('https://api.github.com/repos/NotDeBread/WebsiteV7/commits')
+        .then(res => res.json())
+        .then(data => {
+            doge('dataCommitNum').innerText = `Running on commit #${data.length+1}`
+            doge('dataReleaseNum').innerText = `Released on ${data[0].commit.author.date.substring(0,10)}`
+        })
+    }
+} refreshWebsiteData()
+
+function copyButtonHTML() {
+    navigator.clipboard.writeText(`<a href="https://debread.space/" target="_blank"><img src="https://debread.space/media/chips/debreadspace.gif" alt="DeBread's Space"></a>`)
+    doge('buttonCopyButton').innerText = 'Copied!'
+
+    setTimeout(() => {
+        doge('buttonCopyButton').innerText = 'Copy HTML'
+    }, 5000);
+}

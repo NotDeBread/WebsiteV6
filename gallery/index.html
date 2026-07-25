@@ -9,56 +9,38 @@
     <title>DeBread's Space - Gallery</title>
 </head>
 <body>
-    <div id="crtOverlay"></div>
     <div id="loadingScreenContainer">
         <img src="../media/realFit.png" id="loadingImg" width="100">
         <span id="loadingText">Loading...</span>
     </div>
 
-    <div id="all">
-        <span>Gallery</span>
-        <div class="genericBox">
-            <div class="genericHeader">
-                <div class="genericHeader">
-                    <img src="../media/icons/socials.png">
-                    <span>Characters</span>
-                    <coolLine></coolLine>
-                </div>
+    
+    <div id="imageViewContainer">
+        <div id="imageViewText">
+            <div id="imageViewTitleContainer">
+                <coolLine></coolLine>
+                <span id="imageViewTitle">Image Title</span>
+                <coolLine></coolLine>
             </div>
-            <div id="charactersContainer">
-                <div class="characterButton">
-                    <img src="../media/buddy.png">
-                    <div style="display: flex; justify-content: space-between; width: 100%;">
-                        <span>Buddy</span>
-                        <span>0 Entries</span>
-                    </div>
-                </div>
-                <div class="characterButton">
-                    <img src="../media/buddy.png">
-                    <div style="display: flex; justify-content: space-between; width: 100%;">
-                        <span>Buddy</span>
-                        <span>0 Entries</span>
-                    </div>
-                </div>
-                <div class="characterButton">
-                    <img src="../media/buddy.png">
-                    <div style="display: flex; justify-content: space-between; width: 100%;">
-                        <span>Buddy</span>
-                        <span>0 Entries</span>
-                    </div>
-                </div>
-                <div class="characterButton">
-                    <img src="../media/buddy.png">
-                    <div style="display: flex; justify-content: space-between; width: 100%;">
-                        <span>Buddy</span>
-                        <span>0 Entries</span>
-                    </div>
-                </div>
-            </div>
+            <span id="imageViewDesc" style="color: lightgrey;">Some really really long image description</span>
         </div>
+        <img src="../media/buddy.png" id="imageViewImg" style="min-width: 128px; min-height: 128px; image-rendering: pixelated;">
+        <button id="imageViewButton" onclick="closeImage()">Close</button>
     </div>
-
-    <!--Content goes here-->
+    
+    
+    <div id="all">
+        <div>Gallery</div>
+        <div style="display: flex; justify-content: center;">
+            <span style="color: yellow; font-weight: 700;">THIS PAGE IS UNDER CONSTRUCTION</span>
+        </div>
+        <div id="searchContainer" class="genericBox">
+            <span id="searchLabel">Search...</span>
+            <input placeholder="Search gallery..." id="gallerySearch">
+            <dropdown multiple="true"></dropdown>
+        </div>
+        <div id="imageListContainer"></div>
+    </div>
 
     <script src="../DeBread.js"></script>
     <script src="../global.js"></script>

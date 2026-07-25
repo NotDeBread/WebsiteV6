@@ -10,136 +10,180 @@
 </head>
 <body>
     <div id="crtOverlay"></div>
-    <div id="loadingEmblemContainer">
-        <img src="../media/emblem.svg" width="100" id="loadingEmblem">
-    </div>
+    <div id="achievementNotiContainer"></div>
     <div id="loadingScreenContainer">
-        <div id="loadingScreen"></div>
+        <img src="../media/realFit.png" id="loadingImg" width="100">
+        <span id="loadingText">Loading...</span>
     </div>
 
-    <button onclick="gotoPage('home')" class="goBackButton">
-      <svg style="min-width: 24px !important; min-height: 24px !important;" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l4 4" /><path d="M5 12l4 -4" /></svg>
-      Go back
-    </button>
+    <div id="tooltip">
+        <span>Some sample text</span>
+    </div>
 
-    <!------------------------->
+    <div id="achievementNotiContainer"></div>
 
-
-    <div id="titleContainer">
-      <div>
-        <wavey id="title">About me</wavey>
-        <span>I'm just a guy that resides in Missouri who somehow got into web development.</span>
-      </div>
-      <div id="guyContainer">
-        <wavey id="guyLabel">This is my guy -></wavey>
-        <img src="../media/guy2.png" id="titleGuy">
-      </div>
+    <div id="imageViewContainer">
+        <div id="imageViewText">
+            <div id="imageViewTitleContainer">
+                <coolLine></coolLine>
+                <span id="imageViewTitle">Image Title</span>
+                <coolLine></coolLine>
+            </div>
+            <span id="imageViewDesc" style="color: lightgrey;">Some really really long image description</span>
+        </div>
+        <img src="../media/buddy.png" id="imageViewImg">
+        <button id="imageViewButton" onclick="closeImage()">Close</button>
     </div>
 
     <div id="main">
-      <div class="bodyRow">
-        <div class="body">
-          <div class="headerContainer">
-            <span class="header">Computer Hardware</span>
-            <div class="coolLine"></div>
-          </div>
-          <div class="paragraph">
-            <span>Ever since I got my first (pre-built) pc back in 2020 I've been facinated about how computers worked. Over the years I've slowly been collecting parts and upgrading my PC with the money I've collected from Christmas and my birthday. Currently, I'm enrolled in a special class called Computer Service Technology, where I leave my highschool for half the day to build and learn about computer hardware and software.</span>
-            <div class="imageContainer" style="width: 200px;">
-              <img src="../media/aboutme/pc.jpg" width="200" onclick="openImage('../media/aboutme/pc.jpg', 'An image of one of the PCs I built in my computer servicing class. It includes 14 fans total and 1 useless GPU.')">
-              <span>An image of one of the PCs I built in my computer servicing class. It includes 14 fans total and 1 useless GPU.</span>
-            </div>
-          </div>
+        <div id="dbTitleContainer">
+            <a href="../home/"><- Go back</a>
+            <div id="dbTitle" style="height: 35px;">About me!</div>
         </div>
-        <div class="body">
-          <div class="headerContainer">
-            <span class="header">Web Development</span>
-            <div class="coolLine"></div>
-          </div>
-          <div class="paragraph">
-            <span>About 4 years ago, one of my friends was showcasing thier website in a call I was in. Seeing that inspired me to make one of my own websites, my first attempt being <a onclick="gotoPage('EddieSite')">The Eddie Site</a>. It was nothing special, just a basic website that showcased pictures of my dog Eddie using really basic HTML and a little bit of CSS. I kept messing around with it eventually reaching the point where I had to learn JavaScript to do the things I wanted. My first JS project being <a onclick="gotoPage('EddieAccumulator')">Eddie Accumulator</a>, which was <em>very</em> poorly coded (which you can see <a href="https://github.com/NotDeBread/Eddie-Accumulator/blob/main/upgrades.js" target="_blank">here.</a>).</span>
-            <div class="imageContainer" style="width: 300px;">
-              <img src="../media/oldEddieAccumulator.gif" width="300" onclick="openImage('../media/oldEddieAccumulator.gif','Early gameplay footage of the first version of Eddie Accumulator.')">
-              <span>Early gameplay footage of the first version of <a>Eddie Accumulator.</a></span>
+        <div id="innerMain">
+            <div class="mainSection">
+                <div class="genericBox">
+                    <div class="genericHeader">
+                        <img src="../media/icons/socials.png">
+                        ABOUT THIS GUY
+                        <coolLine></coolLine>
+                    </div>
+                    <p class="genericBodyText">Whats up, I'm DeBread, or Fella, however you want to call me. I'm an 18 year old guy from Missouri trying to make stuff. I'm currently working on <a href="../games/GooberShooter2/">Goober Shooter 2</a> which is my biggest project so far.</p>
+                    <p class="genericBodyText">I like raccoons if that isnt obvious enough 🦝🦝</p>
+                    <div id="aboutMeTags">
+                        <span>👨 HE/HIM</span>
+                        <span title="(unfortunately 😔)">🇺🇸 AMERICAN</span>
+                        <span>🦝 RACC</span>
+                        <span>💜 PURPLE</span>
+                    </div>
+                    <div class="genericHeader" style="margin-top: 20px;">
+                        <img src="../media/icons/web.png">
+                        DEBREAD.SPACE
+                        <coolLine></coolLine>
+                    </div>
+                    <p class="genericBodyText"><a href="../home/">debread.space</a> is my current longest standing project, being active for about 4 years now. I'm never happy with the way my website looks so it has changed a lot over the years. Right now, I'm actually pretty content with the way everything is designed right now so don't expect any major changes soon. This version of the website is supposed to resemble an old style site or something you might find on <a href="https://neocities.org/browse">neocities</a>.</p>
+                    <p class="genericBodyText">When I was first getting into web dev my first site was actually <a href="../EddieSite/">The Eddie Site</a>, made all the way back in the beginning of 2022.</p>
+                    <div style="display: flex; gap: 5px; image-rendering: auto; justify-content: center; overflow-x: auto; margin-top: 5px;">
+                        <img src="../media/aboutme/website0.png" width="250" onclick="openImage('debread.space in 2022','','../media/aboutme/website0.png')">
+                        <img src="../media/aboutme/website1.png" width="250" onclick="openImage('debread.space in 2022','','../media/aboutme/website1.png')">
+                        <img src="../media/aboutme/website2.png" width="250" onclick="openImage('debread.space in late 2022','','../media/aboutme/website2.png')">
+                        <img src="../media/aboutme/website3.png" width="250" onclick="openImage('debread.space in 2023','','../media/aboutme/website3.png')">
+                        <img src="../media/aboutme/website4.png" width="250" onclick="openImage('debread.space in early 2025','','../media/aboutme/website4.png')">
+                    </div>
+                    <em style="color: grey;">debread.space over the years. Hold SHIFT+Scroll to view more.</em>
+                    <div class="genericHeader" style="margin-top: 5px;">
+                        <img src="../media/icons/support.png">
+                        STUFF I LIKE
+                        <coolLine></coolLine>
+                    </div>
+                    <p class="genericBodyText">The game I'm currently hyperfixated on is The Binding of Isaac, which I'm currently trying to achieve dead god on (this will never happen). Some other games I've played extensively are Balatro, Geometery Dash, ULTRAKILL, Celeste, and TUNIC.</p>
+                    <p class="genericBodyText">I'm really into web dev at the moment, working on Goober Shooter 2. I would like to try to branch out and learn something like <a href="https://godotengine.org/">Godot</a> but I have a hard time learning new things. I still have a good time making websites and webgames though.</p>
+                    <p class="genericBodyText">I've also been getting into drawing lately. I starting doing <a href="https://artfight.net">Artfight</a> for the first time this year, which has been a blast so far. I've made some drawings for people I'm really proud of! You can see some of them on my <a href="https://artfight.net/~DeBread">Artfight profile</a>. Most of the other art I have is posted on <a href="https://yeen.town/clips/ap1zqhu3ets10049">YEEN.TOWN</a>.</p>
+                    <div style="display: flex; justify-content: center;">
+                        <img src="../games/GooberShooter2/graphics/credits/fellaDrawing.gif" width="160">
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="bodyRow" id="favoriteBodyRow">
-        <div class="body">
-          <div class="headerContainer">
-            <span class="header">Favorite Animals</span>
-            <div class="coolLine"></div>
-          </div>
-          <span>🦝 - Racoons</span><br>
-          <span>🦊 - Foxes</span><br>
-          <span>🐦‍⬛ - Crows</span>
-        </div>
-        <div class="body">
-          <div class="headerContainer">
-            <span class="header">Favorite Colors</span>
-            <div class="coolLine"></div>
-          </div>
-          <div style="display: flex; justify-content: center; gap: 25px;">
-            <div class="color" style="background-color: rgb(34, 33, 59);">
-              <span>34,33,59<br>#22213b</span>
-            </div>
-            <div class="color" style="background-color: rgb(125, 89, 255);">
-              <span>125,89,255<br>#7d59ff</span>
-            </div>
-            <div class="color" style="background-color: rgb(110, 255, 219);">
-              <span>110,255,219<br>#6effdb</span>
-            </div>
-          </div>
-        </div>
-        <div class="body">
-          <div class="headerContainer">
-            <span class="header">Programming Languages</span>
-            <div class="coolLine"></div>
-          </div>
-          <div class="language">
-            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="rgb(228, 77, 37)"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-html5"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z" /><path d="M15.5 8h-7l.5 4h6l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5" /></svg>
-            <span>HTML</span>
-          </div>
-          <div class="language">
-            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="rgb(45, 83, 229)"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-css3"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z" /><path d="M8.5 8h7l-4.5 4h4l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5" /></svg>            
-            <span>CSS</span>
-          </div>
-          <div class="language">
-            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="rgb(247, 224, 37)"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-javascript"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z" /><path d="M7.5 8h3v8l-2 -1" /><path d="M16.5 8h-2.5a.5 .5 0 0 0 -.5 .5v3a.5 .5 0 0 0 .5 .5h1.423a.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5" /></svg>            
-            <span>JS</span>
-          </div>
-          <wavey style="position: absolute; right: 25px; top: 50px; color: rgb(255,255,255,0.25);">get a load of this guy</wavey>
-        </div>
-      </div>
-      <div class="bodyRow" style="margin-bottom: 100px;">
-        <div class="body">
-          <div class="headerContainer">
-            <span class="header">Favorite Games</span>
-            <div class="coolLine"></div>
-          </div>
-          <div id="gameContainer">
-            <div class="game" style="background-image: url('../media/aboutme/games/ultrakillbg.png');" onclick="window.open('https://store.steampowered.com/app/1229490/ULTRAKILL/','_blank')">
-              <img src="../media/aboutme/games/ultrakill.webp">
-            </div>
-            <div class="game" style="background-image: url('../media/aboutme/games/balatrobg.png');" onclick="window.open('https://www.playbalatro.com/','_blank')">
-              <img src="../media/aboutme/games/balatro.webp">
-            </div>
-            <div class="game" style="background-image: url('../media/aboutme/games/deltarunebg.png');" onclick="window.open('https://deltarune.com/','_blank')">
-              <img src="../media/aboutme/games/deltarune.png">
-            </div>
-            <div class="game" style="background-image: url('../media/aboutme/games/tunicbg.png');" onclick="window.open('https://tunicgame.com/','_blank')">
-              <img src="../media/aboutme/games/tunic.png">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- <img src="../media/real.png" style="position: absolute; top: 100px; left: 500px;"> -->
+            <div class="mainSection">
+                <div class="genericBox">
+                    <div id="navigator">
+                        <div class="genericHeader">
+                            <coolLine></coolLine>
+                            <img src="../media/icons/about.png">
+                            About
+                            <coolLine></coolLine>
+                        </div>
+                        <a href="../home/">Home</a>
+                        <a style="color: white;">About me (YOU ARE HERE)</a>
+                        <a style="color: grey;">Projects</a>
+                        <a style="color: grey;">Gallery</a>
+                        <a href="../GooberShooter2/">Goober Shooter 2</a>
 
-    <!------------------------->
+                        <div class="genericHeader">
+                            <coolLine></coolLine>
+                            <img src="../media/icons/socials.png">
+                            <span>Socials</span>
+                            <coolLine></coolLine>
+                        </div>
+
+                        <a target="_blank" href="https://discord.gg/ecCBTRD2hN">Discord Server</a>
+                        <a target="_blank" href="https://twitter.com/notdebread">Twitter</a>
+                        <a target="_blank" href="https://bsky.app/profile/debread.space">Bluesky</a>
+                        <a target="_blank" href="https://yeen.town/@debread">YEEN TOWN</a>
+                        <a target="_blank" href="https://youtube.com/notdebread">YouTube</a>
+                        <a target="_blank" href="https://github.com/NotDeBread">GitHub</a>
+                        <a target="_blank" href="https://artfight.net/~DeBread">Artfight</a>
+                        <br>
+                        <a target="_blank" href="https://buymeacoffee.com/debread">Support me!</a>
+                        <div class="genericHeader">
+                            <coolLine></coolLine>
+                            <img src="../media/icons/projects.png">
+                            <span>Projects</span>
+                            <coolLine></coolLine>
+                        </div>
+
+                        <a target="_blank" href="../games/GooberShooter2/">Goober Shooter 2 [PLAYTEST]</a>
+                        <a target="_blank" href="../games/GooberShooter/">Goober Shooter</a>
+                        <a target="_blank" href="../games/WinnieAccumulator/">Winnie Accumulator</a>
+                        <a href="../THESERVER/">THE SERVER</a>
+                        <div class="genericHeader">
+                            <coolLine></coolLine>
+                            <img src="../media/icons/archives.png">
+                            Archives
+                            <coolLine></coolLine>
+                        </div>
+
+                        <a target="_blank" href="../archives/Eddie-Accumulator/">Eddie Accumulator</a>
+                        <a target="_blank" href="../archives/RandomSentenceGenerator/">Random Sentence Generator</a>
+                        <a target="_blank" href="../archives/NotJSAB/">Not JSAB</a>
+                        <a target="_blank" href="../archives/PressTheButton/">Press The Button</a>
+                        <a target="_blank" href="../archives/PixelGenerator/">Pixel Generator</a>
+                        <a target="_blank" href="../archives/BigNumber/">Big Number</a>
+                        <a target="_blank" href="../archives/cprGame/">CPR Game</a>
+                        <a target="_blank" href="../archives/MathGame/">Math Game</a>
+                        <a target="_blank" href="../EddieSite/">Eddie Site</a>
+                    </div>
+                </div>
+                <div class="genericBox" id="sitesSection">
+                    <div class="genericHeader">
+                        <coolLine></coolLine>
+                        <img src="../media/icons/web.png">
+                        Friends sites
+                        <coolLine></coolLine>
+                    </div>
+                    <div class="chipContainer">
+                        <a href="https://debread.space/" target="_blank"><img src="../media/chips/debreadspace.gif" alt="DeBread's Space"></a>
+                        <a href="https://plinkel.neocities.org/" target="_blank"><img src="../media/chips/plonksite.png"></a>
+                    </div>
+                    <div style="margin-top: 5px; display: flex; align-items: center; flex-direction: column; gap: 5px;">
+                        <span>Use my button!</span>
+                        <button id="buttonCopyButton" onclick="copyButtonHTML()">Copy HTML</button>
+                    </div>
+                    <div class="genericHeader" style="margin-top: 5px;">
+                        <coolLine></coolLine>
+                        <img src="../media/icons/web.png">
+                        Cool sites
+                        <coolLine></coolLine>
+                    </div>
+                    <div class="chipContainer">
+                        <a href="https://dimden.dev/" target="_blank"><img src="https://dimden.dev/services/images/88x31.gif"></a>
+                        <a href="https://ne0nbandit.neocities.org/" target="_blank"><img src="https://ne0nbandit.github.io/assets/img/btn/mine/nbbanner.png"></a>
+                        <a href="https://swiftyshq.neocities.org/" target="_blank"><img src="https://swiftyshq.neocities.org/img/res/aff/swsign.png" alt="Swifty's HQ!"></a>
+                        <a href="https://ninacti0n.art/" target="_blank"><img src="../media/chips/ninacti0n.gif"></a>
+                        <a href="https://jbc.lol/" target="_blank"><img src="https://jbc.lol/sitebuttonv2.png"></a>
+                        <a href="https://dabric.xyz/" target="_blank"><img src="https://dabric.xyz/butt.png" alt="dabric" width="81" height="33"></a>
+                    </div>
+                </div>
+                <div class="genericBox">
+                    <span id="dataCommitNum">Running on commit ?</span><br>
+                    <span id="dataReleaseNum">Released on ?</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="../DeBread.js"></script>
+    <script src="../global.js"></script>
     <script src="script.js"></script>
 
     <!-- BG Shader -->
@@ -154,14 +198,14 @@
     // #define PIXEL_SIZE_FAC 700.
 
     // default colours
-    // #define colour_1 vec4(1.0,0.3725490196,0.3333333333,1.0)
-    // #define colour_2 vec4(0.0,0.6156862745,1.0,1.0)
-    // #define colour_3 vec4(0.2156862745,0.2588235294,0.2666666667,1.0)
+    #define colour_1 vec4(0.118, 0.098, 0.176 ,1.0)
+    #define colour_2 vec4(0.0,0,0.0,1.0)
+    #define colour_3 vec4(0,0,0,1.0)
 
     // dark theme colors
-    #define colour_1 vec4(0.0, 0.0, 0.0, 1.0)
-    #define colour_2 vec4(0.1, 0.1, 0.1, 1.0)
-    #define colour_3 vec4(0.15, 0.15, 0.15, 1.0)
+    // #define colour_1 vec4(0.0, 0.0, 0.0, 1.0)
+    // #define colour_2 vec4(0.1, 0.1, 0.1, 1.0)
+    // #define colour_3 vec4(0.15, 0.15, 0.15, 1.0)
 
     // light theme colors
     // #define colour_1 vec4(1, 1, 1, 1.0)
@@ -205,8 +249,7 @@
       // Output to screen
       gl_FragColor = (0.3/contrast)*colour_1 + (1. - 0.3/contrast)*(colour_1*c1p + colour_2*c2p + vec4(c3p*colour_3.rgb, c3p*colour_1.a));
     }
-  </script>
-  <script src="../bgShader.js"></script>
-  <script src="../global.js"></script>
+    </script>
+    <script src="../bgShader.js"></script>
 </body>
 </html>

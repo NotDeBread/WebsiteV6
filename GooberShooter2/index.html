@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="../games/GooberShooter2/generic.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="../games/GooberShooter2/graphics/icon128.png">
+    <title>Goober Shooter 2</title>
+</head>
+<body>
+    <div id="crtOverlay"></div>
+    <div id="achievementNotiContainer"></div>
+    <div id="loadingScreenContainer" style="background-color: rgb(25,25,25);">
+        <img src="../media/realFit.png" id="loadingImg" width="100">
+        <span id="loadingText">Loading...</span>
+    </div>
+    <div id="tooltip">
+        <span>Some sample text</span>
+    </div>
+    
+    <div id="achievementNotiContainer"></div>
+
+    <div id="titleContainer">
+        <div style="position: relative; translate: -30px 0px;">
+            <span id="menuTitle1">Goober</span>
+            <span id="menuTitle2">Shooter</span>
+            <div id="menuTitleTwo">2</div>
+            <span>By <a href="../home/">DeBread</a></span>
+        </div>
+    </div>
+
+    <div id="main">
+        <div id="innerMain">
+            <a href="../games/GooberShooter2/" style="margin-bottom: 50px;">
+                <button style="height: 50px; width: 100px;">PLAY NOW</button>
+            </a>
+    
+            <div id="topContainer">
+                <span><strong>Goober Shooter 2</strong> is a browser based top-down roguelike. Collect upgrades, elixirs, and power items to help you progress though increasingly difficult waves of enemies and bosses.</span>
+        
+                <div id="trailerContainer">
+                    <iframe width="576" height="324" src="https://www.youtube.com/embed/BYrJh25OEWo?si=FSkOB8xmYcwcvoDR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div id="cardContainer">
+                <div class="card">
+                    <div>
+                        <div class="cardTitle">
+                            <span>90+ Items</span>
+                            <coolLine></coolLine>
+                        </div>
+                        <span>Use the power of over 90 unique items to help you progress through the waves.</span>
+                    </div>
+                    <div>
+                        <div id="exampleItemTitleContainer">
+                            <div style="display: flex; gap: 5px; white-space: nowrap;">
+                                <img src="../games/GooberShooter2/graphics/upgrades/raccoon_tail.png" id="exampleItemImg">
+                                <span id="exampleItemName">ITEM TITLE</span>
+                            </div>
+                            <div class="tooltipTag" id="exampleItemRarity" style="background-color: grey;">RARITY</div>
+                        </div>
+                        <div>
+                            <div id="exampleItemDescription">Some really really really long description about this really cool item</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div style="display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <div class="cardTitle">
+                                <span>30+ Unique characters</span>
+                                <coolLine></coolLine>
+                            </div>
+                            <span>Featuring over 30 of me and my friends characters, each of them have thier own stats, starting items, and other properties.</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: end;">
+                            <img src="../games/GooberShooter2/graphics/characters/fellaPortrait.png" width="72" id="exmapleCharacter">
+                            <img src="../games/GooberShooter2/graphics/characters/fellaPortraitLarge.png" style="translate: 5px 5px;" id="exmapleCharacterLarge">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../DeBread.js"></script>
+    <script src="../global.js"></script>
+    <script src="../games/GooberShooter2/upgrades.js"></script>
+    <script src="../games/GooberShooter2/characters.js"></script>
+    <script src="script.js"></script>
+
+    <!-- BG Shader -->
+    <script src="https://xemantic.github.io/shader-web-background/dist/shader-web-background.min.js"></script>
+    <script type="x-shader/x-fragment" id="image">
+    precision mediump float;
+    #define SPIN_EASE 0.8
+    #define spin_time 5.
+    #define spin_amount 0.3
+    #define contrast 1.
+
+    // #define PIXEL_SIZE_FAC 700.
+
+    // default colours
+    #define colour_1 vec4(0.0, 0.0, 0.0, 1.0)
+    #define colour_2 vec4(0.1, 0.1, 0.1, 1.0)
+    #define colour_3 vec4(0.15, 0.15, 0.15, 1.0)
+
+    // dark theme colors
+    // #define colour_1 vec4(0.0, 0.0, 0.0, 1.0)
+    // #define colour_2 vec4(0.1, 0.1, 0.1, 1.0)
+    // #define colour_3 vec4(0.15, 0.15, 0.15, 1.0)
+
+    // light theme colors
+    // #define colour_1 vec4(1, 1, 1, 1.0)
+    // #define colour_2 vec4(0.9, 0.9, 0.9, 1.0)
+    // #define colour_3 vec4(0.8, 0.8, 0.8, 1.0)
+
+    uniform vec2 iResolution;
+    uniform float iTime;
+
+    void main( )
+    {
+      // uncomment to enable pixelated bg
+      // float pixel_size = length(iResolution.xy)/PIXEL_SIZE_FAC;
+      float pixel_size = 1.0;
+      vec2 uv = (floor(gl_FragCoord.xy*(1./pixel_size))*pixel_size - 0.5*iResolution.xy)/length(iResolution.xy) - vec2(0.12, 0.);
+      
+      float uv_len = length(uv);
+      
+      float speed = (spin_time*SPIN_EASE*0.2) + 302.2;
+      float new_pixel_angle = (atan(uv.y, uv.x)) + speed - SPIN_EASE*20.*(1.*spin_amount*uv_len + (1. - 1.*spin_amount));
+      
+      vec2 mid = vec2(0.5, 0.5);
+      uv = (vec2((uv_len * cos(new_pixel_angle) + mid.x), (uv_len * sin(new_pixel_angle) + mid.y)) - mid);
+      
+      uv *= 30.;
+      speed = iTime*(2.);
+      vec2 uv2 = vec2(uv.x+uv.y);
+
+      for(int i=0; i < 5; i++) {
+        uv2 += sin(max(uv.x, uv.y)) + uv;
+        uv  += 0.5*vec2(cos(5.1123314 + 0.353*uv2.y + speed*0.131121),sin(uv2.x - 0.113*speed));
+        uv  -= 1.0*cos(uv.x + uv.y) - 1.0*sin(uv.x*0.711 - uv.y);
+      }
+      
+      float contrast_mod = (0.25*contrast + 0.5*spin_amount + 1.2);
+      float paint_res =min(2., max(0.,length(uv)*(0.035)*contrast_mod));
+      float c1p = max(0.,1. - contrast_mod*abs(1.-paint_res));
+      float c2p = max(0.,1. - contrast_mod*abs(paint_res));
+      float c3p = 1. - min(1., c1p + c2p);
+
+      // Output to screen
+      gl_FragColor = (0.3/contrast)*colour_1 + (1. - 0.3/contrast)*(colour_1*c1p + colour_2*c2p + vec4(c3p*colour_3.rgb, c3p*colour_1.a));
+    }
+    </script>
+    <script src="../bgShader.js"></script>
+</body>
+</html>
