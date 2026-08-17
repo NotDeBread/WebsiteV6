@@ -1,0 +1,94 @@
+<div>
+    <span class="genericTitle">Modded Enemies</span>
+    <span class="genericHeader">Getting Started</span>
+    <span>First decide whether you want your enemy to be a standard <a>Enemy</a>, <a>Miniboss</a>, or <a href="#Bosses">Boss</a> and keep in mind what object you are going to be appending your enemy data to.</span>
+    <ul>
+        <li><strong>Standard Enemies</strong> can spawn every wave based on thier <code>credits</code> value. Use the <code>enemies</code> object.</li>
+        <li><strong>Minibosses</strong> spawn once every 25 waves. Use the <code>minibosses</code> object.</li>
+        <li><strong>Bosses</strong> spawn once every 100 waves. Use the <code>bosses</code> object.</li>
+    </ul>
+    <span class="genericHeader">Creating an enemy</span>
+    <pre class="prettyprint lang-js">
+enemies.exampleEnemy = {
+    name: 'Example Enemy'
+}</pre>
+    <span class="genericHeader">Enemy Attributes</span>
+    <span>All attributes are optional unless specified.</span>
+    <table>
+        <tr>
+            <th>Attribute</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td><code>name (string)</code></td>
+            <td>Defines the enemy's name. Used in sandbox tooltips and bossbars.</td>
+        </tr>
+        <tr>
+            <td><code>desc (string)</code></td>
+            <td>Defines the enemy's description. Used in sandbox tooltips.</td>
+        </tr>
+        <tr>
+            <td><code>color (array) [r,g,b]</code></td>
+            <td>Defines the enemy's description. Used in sandbox tooltips.</td>
+        </tr>
+        <tr>
+            <td><code>texture (string)</code></td>
+            <td>Defines the texture of the enemy. Use the file path relative to the <code>graphics/enemies/</code> folder. For example, for an enemy with the texture <code>exampleEnemy.png</code> make sure the texture is in the <code>graphics/enemies/</code> folder and set the enemy's texture value to <code>'exampleEnemy.png'</code>.</td>
+        </tr>
+        <tr>
+            <td><code>size (number)</code></td>
+            <td>Defines the enemy's size in pixels.</td>
+        </tr>
+        <tr>
+            <td><code>health (number)</code></td>
+            <td>Defines the enemy's health. If the health is set to <code>Infinity</code>, the damage delt to the enemy will be shown, like the dummy enemies.</td>
+        </tr>
+        <tr>
+            <td><code>speed (number)</code></td>
+            <td>Defines the enemy's speed in pixels/tick.</td>
+        </tr>
+        <tr>
+            <td><code>meleeDamage (number)</code></td>
+            <td>Defines the amount of damage the enemy deals to the player when colliding with them.</td>
+        </tr>
+        <tr>
+            <td><code>credits (number) (required)</code></td>
+            <td>Defines the amount of credits the enemy is worth in the <a>wave system</a>. If the credits is set to <code>Infinity</code> it will be marked as a "Sandbox Only" enemy.</td>
+        </tr>
+        <tr>
+            <td><code>projectile (object)</code></td>
+            <td>See <a>Projectiles</a>.</td>
+        </tr>
+    </table>
+    <span class="genericHeader">Enemy Events</span>
+    <span>Enemy events are functions that run when specific things related to that enemy occur.</span>
+    <table>
+        <tr>
+            <th>Event</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td><code>tick(enemy)</code></td>
+            <td>Runs every tick the enemy is alive.</td>
+        </tr>
+        <tr>
+            <td><code>onSpawn(enemy)</code></td>
+            <td>Runs when the enemy is spawned.</td>
+        </tr>
+        <tr>
+            <td><code>onDamage(enemy)</code></td>
+            <td>Runs when the enemy is damaged.</td>
+        </tr>
+        <tr>
+            <td><code>onDeath(enemy)</code></td>
+            <td>Runs when the enemy is killed.</td>
+        </tr>
+        <tr>
+            <td><code>onPlayerCollision(enemy)</code></td>
+            <td>Runs when the player collides with the enemy.</td>
+        </tr>
+    </table>
+</div>
+<div>
+
+</div>

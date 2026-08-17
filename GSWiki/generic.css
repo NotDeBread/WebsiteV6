@@ -40,6 +40,26 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
 
 /* ----- */
 
+cb {
+    color: rgb(255, 100, 100);
+    font-weight: 700;
+}
+
+cg {
+    color: rgb(100, 255, 100);
+    font-weight: 700;
+}
+
+cp {
+    color: rgb(255,255,100);
+    font-weight: 700;
+}
+
+cs {
+    color: aqua;
+    font-weight: 700;
+}
+
 :root {
     --lightbg4: rgb(60,60,60);
     --lightbg3: rgb(55,55,55);
@@ -61,6 +81,28 @@ body {
     height: 100dvh;
 }
 
+table {
+    width: 100%;
+    margin: 10px 0px;
+    background-color: var(--lightbg1);
+}
+
+table th {
+    background-color: var(--lightbg2);
+    font-weight: 700;
+}
+
+table td {
+    border: 1px solid var(--lightbg4);
+    padding: 5px;
+}
+
+code {
+    outline: 1px solid var(--lightbg2);
+    height: 100%;
+    padding: 5px;
+}
+
 #topper {
     display: flex;
     justify-content: space-between;
@@ -75,7 +117,7 @@ body {
 
 #main {
     display: flex;
-    height: 100%;
+    height: calc(100% - 74px);
 }
 
 #explorer {
@@ -90,8 +132,8 @@ body {
 }
 
 .explorerItem {
-    overflow: hidden;
-    height: 35px;
+    height: fit-content;
+    position: relative;
 }
 
 .explorerItemButtons {
@@ -121,18 +163,96 @@ body {
     background-color: var(--lightbg4);
 }
 
-.explorerItem button:nth-child(1) {
-    min-width: 35px;
-    justify-content: center;
+.explorerItem .explorerItem {
+    margin-left: 15px;
 }
 
-.explorerItem button:nth-child(2) {
+.explorerItem .explorerItem::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    width: 1px;
+    height: 100%;
+    background-color: var(--lightbg2);
+}
+
+.explorerItemArrow {
+    min-width: fit-content;
+    justify-content: center;
+    min-width: 35px;
+}
+
+.explorerItemButtons a {
+    text-decoration: none;
+    width: 100%;
+}
+
+.explorerItemButtons a button {
     width: 100%;
     text-align: left;
+    height: 100%;
+}
+
+.explorerItemChildren {
+    display: none;
 }
 
 #body {
     overflow: auto;
     width: 100%;
     padding: 10px;
+    display: flex;
+    gap: 5px;
+    justify-content: space-between;
+}
+
+.genericTitle {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.genericHeader {
+    font-size: 1.25em;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.infoCard {
+    width: 350px;
+    padding: 5px;
+    background-color: var(--lightbg1);
+    outline: 1px solid var(--lightbg3);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.infoCard img {
+    max-width: 100%;
+}
+
+#body span {
+    display: block;
+}
+
+#body a {
+    color: rgb(255, 100, 100);
+    cursor: pointer;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+#body a img {
+    vertical-align: middle;
+    margin-right: 5px;
+    image-rendering: pixelated;
+}
+
+#body a[href] {
+    color: rgb(0, 255, 255);
+}
+
+#body a:hover {
+    text-decoration: underline;
 }

@@ -1,0 +1,63 @@
+<div>
+    <span class="genericTitle">Money Bonuses</span>
+    <span>Once the shop opens after a set of waves, the player can gain various different <strong>Money Bonuses</strong>.</span>
+
+    <table>
+        <tr>
+            <th>Bonus</th>
+            <th>Details</th>
+        </tr>
+        <tr>
+            <td>Max health bonus</td>
+            <td>
+                Gives <cp>$25</cp> if the player is at max health.
+            </td>
+        </tr>
+        <tr>
+            <td>Flawless</td>
+            <td>
+                Gives <cp>$50</cp> + the current wave if the player survives all waves since the previous shop without getting hit once.
+            </td>
+        </tr>
+        <tr>
+            <td>Interest</td>
+            <td>
+                Gives <cp>$1</cp> for every <cp>$5</cp> kept when leaving the previous shop.<br>
+                This is limited by the players interestLimit value, which can be increased with upgrades such as <a><img src="../games/GooberShooter2/graphics/upgrades/credit_card.png">Credit Card</a>.
+            </td>
+        </tr>
+        <tr>
+            <td>Boss kill</td>
+            <td>
+                Gives <cp>$25</cp> for each boss the player has killed since the previous shop.
+            </td>
+        </tr>
+        <tr>
+            <td>Store credit</td>
+            <td>
+                Gives money equal to the players couponBonus value, which can be increased with the <a><img src="../games/GooberShooter2/graphics/upgrades/store_credit.png">Store Credit</a> item.
+            </td>
+        </tr>
+    </table>
+
+    <span class="genericHeader">Interactions</span>
+    <ul>
+        <li>The player can still gain money bonuses in no-money challenges like <a><img src="../games/GooberShooter2/graphics/challenges/poverty.png">Poverty</a> and <a><img src="../games/GooberShooter2/graphics/challenges/greed.png">Greed</a>.</li>
+        <li>These bonuses still apply in the <a>Sandbox</a>.</li>
+    </ul>
+
+    <span class="genericHeader">Modding</span>
+    <span>To give the player a money bonus, append an object to the <code>player.moneyBonusQueue</code> array using this format:</span>
+    <pre class="prettyprint lang-js">
+player.moneyBonusQueue.push({
+    text: 'Example', //The name that is displayed
+    value: 25, //The amount of money that is given to the player
+})</pre>
+    <span>Keep in mind, these bonuses only apply once the player enters the shop.</span>
+</div>
+<div>
+    <div class="infoCard">
+        <img src="images/moneybonus.png">
+        <span>An example of a money bonus in the shop.</span>
+    </div>
+</div>
