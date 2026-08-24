@@ -256,3 +256,15 @@ code {
 #body a:hover {
     text-decoration: underline;
 }
+
+.characterTag {
+    background-color: grey;
+    width: fit-content;
+    padding: 0px 5px;
+    border-radius: 5px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 2px 0px 0px rgb(255,255,255,0.25);
+}
