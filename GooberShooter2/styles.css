@@ -1,0 +1,138 @@
+body {
+    overflow: unset;
+    height: fit-content;
+}
+
+#titleContainer {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5em;
+}
+
+#menuTitle1 div, #menuTitle2 div {
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 1;
+}
+
+#menuTitleTwo {
+    position: absolute;
+    right: -65px;
+    top: -10px;
+    line-height: 1;
+    font-size: 5em;
+    font-weight: 700;
+    rotate: -7deg;
+    animation: twoRotate 10s ease-in-out infinite, twoScale 9s ease-in-out infinite;
+}
+
+@keyframes twoRotate {
+    from {
+        rotate: -10deg;
+    }
+    50% {
+        rotate: -5deg;
+    }
+    to {
+        rotate: -10deg;
+    }
+}
+
+@keyframes twoScale {
+    from {
+        transform: scale(0.95);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    to {
+        transform: scale(0.95);
+    }
+}
+
+#main {
+    margin: 0px !important; /*god i hate this*/
+}
+
+#innerMain {
+    width: var(--pageWidth);
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#topContainer {
+    display: flex;
+    gap: 50px;
+    font-size: 1.25em;
+}
+
+#trailerContainer {
+    width: 576px;
+    min-width: 576px;
+    height: 324px;
+    outline: 2px solid white;
+}
+
+#cardContainer {
+    display: flex;
+    gap: 5px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.card {
+    margin-top: 25px;
+    padding: 5px;
+    outline: 2px solid white;
+    display: flex;
+    gap: 5px;
+    width: 475px;
+    height: 200px;
+    background-color: rgb(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+}
+
+.cardTitle {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    white-space: nowrap;
+    font-size: 1.25em;
+    font-weight: 700;
+}
+
+#exampleItemTitleContainer {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    width: 300px;
+    max-width: 300px;
+}
+
+@media (max-width: 1000px) {
+    #cardContainer {
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+
+    .card {
+        width: calc(100% - 10px);
+    }
+
+    #topContainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 750px) {
+    #trailerContainer {
+        scale: 0.6;
+    }
+}
