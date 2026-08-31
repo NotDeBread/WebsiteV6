@@ -8,6 +8,7 @@ const Home = {
             Bread: {},
             Fella: {},
             Plonk: {},
+            Ashton: {},
             Luke: {}
         },
         Weapons: {
@@ -92,11 +93,17 @@ function updateHash() {
 window.addEventListener('hashchange', updateHash)
 
 async function loadPage(page) {
+    doge('body').innerText = 'Loading...'
     const response = await fetch(`articles/${page}.html`);
     const html = await response.text()
 
-    doge('body').innerHTML = html
-    updateCustomElements()
+    if(response.ok) {
+        doge('body').innerHTML = html
+        updateCustomElements()
+    } else {
+        doge('body').innerText = 'This page has not been made yet!'
+    }
+
 }
 
 const characterUnlocks = {
@@ -106,6 +113,11 @@ const characterUnlocks = {
     isaac: 'Complete the "<a href="#Achievements"><img src="../../games/GooberShooter2/graphics/achievements/Reroll_Addict.png">Reroll Addict</a>" achievement.',
     friend: 'Complete the "<a href="#Achievements"><img src="../../games/GooberShooter2/graphics/achievements/The_Egg.png">The Egg</a>" achievement.',
     tutorialist: 'Complete the "<a href="#Achievements"><img src="../../games/GooberShooter2/graphics/achievements/The_End.png">The End</a>" achievement.',
+    ashton: 'Complete the "<a href="#Achievements"><img src="../../games/GooberShooter2/graphics/achievements/Found_Me.png">You found me</a>" achievement.',
+    tammy: 'Complete the "<a href="#Achievements"><img src="../../games/GooberShooter2/graphics/achievements/Big_Teeth.png">Big Teeth</a>" achievement.',
+    lorna: 'Complete the "<a href="#Achievements"><img src="../../games/GooberShooter2/graphics/achievements/Law_Enforcement.png">Law Enforcement</a>" achievement.',
+    luke: 'Complete the "<a href="#Achievements"><img src="../../games/GooberShooter2/graphics/achievements/Divorce.png">Divorce</a>" achievement.',
+    tana: 'Complete the "<a href="#Achievements"><img src="../../games/GooberShooter2/graphics/achievements/Unc.png">Unc still got it</a>" achievement.'
 }
 
 function updateCustomElements() {
